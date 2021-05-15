@@ -1,29 +1,99 @@
 {
 	"@metadata": {
 		"authors": [
-			"LaMagiaaa",
-			"Linuxmetel"
+			"stjn"
 		]
 	},
+
+	"bullet": "• {0}",
+	"separator": " – {0}",
 	"yes": "はい",
 	"no": "いいえ",
+
 	"help-title": "ヘルプ",
 	"help-title-command": "{1}{0}{msg:separator}ヘルプ",
-	"help-version": "バージョン {0}。",
-	"help-repo": "ソースコード：{0}",
+	"help-all": "すべてのトップレベルのコマンドとグループを一覧表示します。コマンドを指定すると、より詳細な情報が表示されます。",
+	"help-version": "バージョン {0}.",
+	"help-repo": "ソースコード: {0}",
 	"help-commands": "コマンド",
 	"help-subcommands": "サブコマンド",
-	"help-aliases": "別名",
-	"help-optional": "省略可能",
+	"help-aliases": "エイリアス",
+	"help-arguments": "引数",
+	"help-default": "デフォルト: `{0}`.",
+	"help-optional": "任意",
+	"help-group-standalone": "このグループは独立したコマンドです。",
+	"help-command": "コマンドヘルプを表示します。",
+	"help-command-command": "コマンドのヘルプを提供。",
+
+	"configuring-status": ":information_source: ソケットへ接続しました。",
+	"configuring-status-streaming": "ストリームから最新の応答: {0} 分 {1} 秒 前。",
+	"configuring-changed-domain": "このサーバー上の最近の変更ストリームのドメインが **{0}** へ変更されました。",
+	"configuring-changed-lang": "このサーバー上のBOTの言語は **{0}** へ変更されました。",
+	"configuring-changed-translatewiki": "Translatewiki上の最近の変更に関するレポートは言語 **{1}** のチャンネル{0}で有効になっています。",
+	"configuring-changed-translatewiki-channel": "Translatewiki上の最近の変更に関するレポートのチャンネルを{0}に変更しました。",
+	"configuring-changed-translatewiki-lang": "Translatewiki上の最近の変更に関するレポートがコンパイルされる言語が **{0}** に変更されました。",
+	"configuring-changed-wiki": "このサーバー上のリンク用のWikiを **{0}** に変更しました。",
+	"configuring-changed-wiki-channel": "このチャンネル上のリンクのWikiを**{0}**に変更しました。",
+	"configuring-changed-reset": "値をデフォルトに戻しました。",
+
+	"configuring-error-same": "入力された値は、現在の値と同じです。",
+	"configuring-error-strange": "不明なエラーによってコマンドは失敗しました。",
+	"configuring-required-value": "コマンドの完全なヘルプを得るには、`{1}help {0}`と入力して下さい。",
+	"configuring-badvalue-domain": "ストリームはWikimediaプロジェクトでのみ利用できます。\n許可されているドメインの一覧: {0}.",
+	"configuring-badvalue-lang": "ボットはあなたの入力を有効なISO 639コードとして認識しませんでした。",
+	"configuring-badvalue-wiki": "URLの最後には必ず`{0}`が必要です。",
+
+	"configuring-help-status": "ボットが動作しているかどうかを確認します。",
+	"configuring-help-domain": "このサーバで最近の変更をブロードキャストするドメインを変更します。Wikimediaプロジェクトでのみ動作します。",
+	"configuring-help-domain-value": "Wikimediaプロジェクトのドメイン（ja.wikipedia.org形式）を指定します。デフォルトに戻すには`-`を使います。",
+	"configuring-help-lang": "このサーバー上のボットの言語を変更します。",
+	"configuring-help-lang-value": "ボットの言語を選択してください。デフォルトに戻すには`-`を使います。",
+	"configuring-help-translatewiki": "Translatewikiの最近の変更について、1時間ごとにいずれかのチャンネルで報告を開始または終了します。",
+	"configuring-help-translatewiki-channel": "ボットが利用可能なチャンネル。",
+	"configuring-help-translatewiki-value": "Translatewikiで翻訳可能な言語（ISO 639の言語コード）。レポートを終了するには言語部分に`-`を入力してください。",
+	"configuring-help-wiki": "このサーバーのリンク用にメインのwikiを変更します。末尾の/wiki/$1は必須です。",
+	"configuring-help-wiki-channel": "このチャンネルへリンクされるwikiを変更します。末尾の/wiki/$1は必須です。",
+	"configuring-help-wiki-value": "目的のwikiを<https://ja.wikipedia.org/wiki/$1>形式で入力します。デフォルトに戻すには `-` を使います。",
+
 	"eventstreams-diff": "差分",
-	"eventstreams-talk": "トーク",
+	"eventstreams-talk": "議論",
 	"eventstreams-contribs": "投稿記録",
 	"eventstreams-new": "新",
-	"eventstreams-bot": "ボ",
+	"eventstreams-bot": "B",
 	"eventstreams-minor": "細",
+
 	"linking-link": "リンク:",
-	"linking-links": "リンク：",
-	"streaming-key-namespace": "名前空間ナンバー",
+	"linking-links": "リンク:",
+	"linking-toolong": "上記のメッセージへのリンクは、Discordではメッセージが長くなりすぎるため、提供していません。",
+
+	"streaming-stream-namespace": "リンク元のnamesapase `{0}`",
+	"streaming-stream-title": "リンク元ページ `{0}`",
+	"streaming-opened": ":white_check_mark: チャンネル{1}{2}にストリーム{0}が追加されました。",
+	"streaming-edited": ":eight_spoked_asterisk: チャンネル{1}のストリーム{0}のパラメータが以下のように変更されました:\n{2}",
+	"streaming-edited-nothing": ":ok: チャンネル{1}のストリーム{0}には変化がありませんでした。",
+	"streaming-closed": ":negative_squared_cross_mark: ストリーム{0}がチャンネル{1}から削除されました。",
+	"streaming-list": ":information_source: このサーバー上の{0}個のアクティブなストリーム。\n{1}",
+	"streaming-list-nothing": ":ok: このサーバーには、オープンされたストリームはありません。",
+	"streaming-list-stream": "**{1}個のストリーム {0}:**",
+
+	"streaming-key-bot": "BOTの編集を含む",
+	"streaming-key-in-comment": "コメントを検索",
+	"streaming-key-diff-length": "最小差分長",
+	"streaming-key-minor": "細部の編集を含む",
+	"streaming-key-namespace": "namespace番号",
+	"streaming-key-patrolled": "パトロールステータスによるフィルタ",
 	"streaming-key-title": "ページ名",
-	"streaming-key-type": "編集の種類"
+	"streaming-key-type": "編集の種類",
+
+	"streaming-required-goal": "ストリーム終端（ページタイトルまたはnamespace番号）が必要です。コマンドの完全なヘルプを得るには、`{1}help {0}`を送信してください。",
+
+	"streaming-help-open": "チャンネルの最近の変化のストリーミングを開始します。",
+	"streaming-help-edit": "チャンネルの最近の変更ストリームのパラメータを編集します。",
+	"streaming-help-close": "チャンネルの最近の変更点のストリーミングを停止します。",
+	"streaming-help-list": "このサーバーで開かれているすべてのストリームを一覧表示します。",
+	"streaming-help-channel": "BOTが利用可能なチャンネルです。",
+	"streaming-help-args": "有効なストリームパラメーター:\n{msg:bullet}`--title` (*string*){msg:separator}{msg:streaming-key-title}\n{msg:bullet}`--namespace` (*int*){msg:separator}{msg:streaming-key-namespace}\n{msg:bullet}`--bot` (*bool*){msg:separator}{msg:streaming-key-bot}\n{msg:bullet}`--in-comment` (*string*){msg:separator}{msg:streaming-key-in-comment}\n{msg:bullet}`--diff-length` (*int*){msg:separator}{msg:streaming-key-diff-length}\n{msg:bullet}`--minor` (*bool*){msg:separator}{msg:streaming-key-minor}\n{msg:bullet}`--patrolled` (`only` / `none` / `any`){msg:separator}{msg:streaming-key-patrolled}\n{msg:bullet}`--type` (`new` / `edit` / `any`){msg:separator}{msg:streaming-key-type}",
+
+	"translatewiki-deadline": "良くない翻訳と荒らし行為の防止と補足の為、翻訳を **until 00:00** Monday UTC までチェックさせます。",
+	"translatewiki-header": "{2} 人の編集者から{0} 個のメッセージ"
 }
